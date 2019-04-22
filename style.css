@@ -1,0 +1,118 @@
+* {
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica;
+}
+
+.top-banner ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ff6411;
+}
+
+.top-banner li {
+  float: right;
+  margin-right: calc(14vw);
+}
+
+.top-banner li a {
+  display: block;
+  color: white;
+  font-size: 15px;
+  background-color: black;
+  text-align: center;
+  padding: 17px 33px;
+  text-decoration: none;
+}
+
+.top-banner li a:hover {
+  background-color: #565656;
+}
+
+.nav {
+  width: 100%;
+  background-color: white;
+  position: relative;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 15px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 40px 30px 30px 30px;
+  text-decoration: none;
+  color: black;
+  border-bottom: 5px solid transparent;
+}
+
+.nav > .nav-links > a:hover {
+  letter-spacing: 1px;
+  color: #ff6411;
+  border-bottom: 5px solid #ff6411;
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:750px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 20px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: white;
+  }
+
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 20px;
+    height: 8px;
+    border-top: 2px solid #ff6411;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: white;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 70px;
+    left: 0px;
+  }
+
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
