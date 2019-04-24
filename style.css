@@ -249,5 +249,5 @@ h3 {
 
 	@media (max-width:400px) {
 		  .donate-button a {
-				margin-left: calc(-35vw);
+				margin-left: calc(15vw);
 		  }
