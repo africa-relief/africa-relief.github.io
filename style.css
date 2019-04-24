@@ -63,10 +63,6 @@ body {
   border-bottom: 5px solid #ff6411;
 }
 
-.nav .nav-links .active a{
-	background-image: linear-gradient(to bottom, rgba(255,255,255,1), rgba(240,240,240,1));
-}
-
 .nav > #nav-check {
   display: none;
 }
@@ -98,7 +94,7 @@ body {
     position: absolute;
     display: block;
     width: 100%;
-    background-image: linear-gradient(to bottom, rgba(240,235,235,1), rgba(255,255,255,1));
+    background-image: linear-gradient(to bottom, rgba(250,250,250,1), rgba(255,255,255,1));
     height: 0px;
     transition: all 0.3s ease-in;
     overflow-y: hidden;
