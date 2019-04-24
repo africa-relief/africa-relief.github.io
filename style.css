@@ -6,39 +6,21 @@
 
 body {
   font-family: Helvetica;
-}
-
-.top-banner ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #ff6411;
-}
-
-.top-banner li {
-  float: right;
-  margin-right: calc(14vw);
-}
-
-.top-banner li a {
-  display: block;
-  color: white;
-  font-size: 15px;
-  background-color: black;
-  text-align: center;
-  padding: 17px 33px;
-  text-decoration: none;
-}
-
-.top-banner li a:hover {
-  background-color: #565656;
+	background-color: grey;
 }
 
 .nav {
   width: 100%;
+	height: 100px;
   background-color: white;
-  position: relative;
+  position: fixed;
+}
+
+.logo-image img{
+	width: 100%;
+  max-width: 280px;
+  height: auto;
+	margin-top: -1em;
 }
 
 .nav > .nav-btn {
@@ -53,10 +35,14 @@ body {
 
 .nav > .nav-links > a {
   display: inline-block;
-  padding: 40px 30px 30px 30px;
+  padding: 33px;
   text-decoration: none;
   color: black;
   border-bottom: 5px solid transparent;
+}
+
+.nav-links a.nav-logo{
+	padding-bottom: 20px;
 }
 
 .nav > .nav-links > a:hover {
@@ -65,25 +51,27 @@ body {
   border-bottom: 5px solid #ff6411;
 }
 
+.nav .nav-links .active a{
+	color: white;
+}
+
 .nav > #nav-check {
   display: none;
 }
 
-@media (max-width:750px) {
+@media (max-width:822px) {
   .nav > .nav-btn {
     display: inline-block;
     position: absolute;
     right: 15px;
     top: 10px;
   }
+
   .nav > .nav-btn > label {
     display: inline-block;
     width: 50px;
     height: 50px;
-    padding: 20px;
-  }
-  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-    background-color: white;
+    padding: 30px 30px 20px 20px;
   }
 
   .nav > .nav-btn > label > span {
@@ -92,6 +80,8 @@ body {
     height: 8px;
     border-top: 2px solid #ff6411;
   }
+
+
   .nav > .nav-links {
     position: absolute;
     display: block;
@@ -100,7 +90,7 @@ body {
     height: 0px;
     transition: all 0.3s ease-in;
     overflow-y: hidden;
-    top: 70px;
+    top: 100px;
     left: 0px;
   }
 
@@ -115,4 +105,12 @@ body {
     height: calc(100vh - 50px);
     overflow-y: auto;
   }
+}
+
+.nav-links .donate-logo {
+	width: 100%;
+	max-width: 60px;
+	height: auto;
+	margin: 0px;
+	margin-top: -0.6em;
 }
