@@ -182,14 +182,14 @@ body {
 	}
 
     .item:nth-child(1) {
-      background: url('image_i.jpg');
+      background: url('image_iii.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
     }
 
     .item:nth-child(2) {
-      background: url('image_iii.jpg');
+      background: url('image_ii.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
