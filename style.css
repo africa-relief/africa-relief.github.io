@@ -12,8 +12,10 @@ body {
 .nav {
   width: 100%;
 	height: 100px;
-  background-color: white;
-  position: fixed;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,1), rgba(240,236,236,1));
+	/* background-color: white; */
+  position: relative;
+	z-index: 99999;
 }
 
 .logo-image img{
@@ -44,7 +46,17 @@ body {
 
 .nav-links a.nav-logo{
 	padding-bottom: 20px;
+	/* background: url('donate_logo copy.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 100px; */
 }
+
+/* .nav-links .nav-logo:hover{
+	background: url('donate_logo.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+} */
 
 .nav > .nav-links > a:hover {
   letter-spacing: 1px;
@@ -53,7 +65,7 @@ body {
 }
 
 .nav .nav-links .active a{
-	color: white;
+	background-image: linear-gradient(to bottom, rgba(255,255,255,1), rgba(240,240,240,1));
 }
 
 .nav > #nav-check {
@@ -72,7 +84,7 @@ body {
     display: inline-block;
     width: 50px;
     height: 50px;
-    padding: 30px 30px 20px 20px;
+    padding: 32px 30px 20px 20px;
   }
 
   .nav > .nav-btn > label > span {
@@ -87,7 +99,7 @@ body {
     position: absolute;
     display: block;
     width: 100%;
-    background-color: white;
+    background-image: linear-gradient(to bottom, rgba(240,235,235,1), rgba(255,255,255,1));
     height: 0px;
     transition: all 0.3s ease-in;
     overflow-y: hidden;
@@ -103,7 +115,7 @@ body {
     height: 0px;
   }
   .nav > #nav-check:checked ~ .nav-links {
-    height: calc(100vh - 50px);
+    height: calc(80vh);
     overflow-y: auto;
   }
 }
@@ -115,3 +127,82 @@ body {
 	margin: 0px;
 	margin-top: -0.6em;
 }
+
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+}
+
+    html,
+    body,
+    .carousel,
+    .carousel-inner,
+    .carousel-inner .item {
+      height: 90%;
+    }
+
+		.carousel-control {
+    height: calc(59vh);
+	}
+
+    .item:nth-child(1) {
+      background: url('image_i.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+    }
+
+    .item:nth-child(2) {
+      background: url('image_iii.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+    }
+
+    .item:nth-child(3) {
+      background: url('image_ii.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+    }
