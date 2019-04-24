@@ -6,7 +6,7 @@
 
 body {
   font-family: Helvetica;
-	background-color: white;
+	background-color: grey;
 }
 
 .nav {
@@ -182,7 +182,7 @@ body {
     }
 
 		.carousel-control {
-    height: 40%;
+    height: 81%;
 	}
 
     .item:nth-child(1) {
