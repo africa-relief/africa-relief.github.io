@@ -363,19 +363,12 @@ width: 100px; */
     width:100%;
   }
 
-	.container1 {
+	/* .container1 {
 		margin-top: calc(-8vh);
-	}
+	} */
 
 }
 
-@media screen and (max-height:550px) {
-
-	.container1 {
-	margin-bottom: calc(24vh);
-	}
-
-}
 
 .stories-button a  {
 	background: transparent;
