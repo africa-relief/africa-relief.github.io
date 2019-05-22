@@ -67,35 +67,35 @@ body {
 	background-color: white;
   position: relative;
 	z-index: 99999;
-}
+} */
 
 .logo-image img{
 	width: 90%;
-  max-width: 270px;
-	min-width: 250px;
+  max-width: 250px;
   height: auto;
-	margin-top: 0.2em;
+	margin-top: 0.5em;
+	margin-left: 20px;
 }
 
 .nav > .nav-btn {
   display: none;
 }
 
-.nav > .nav-links {
+.container6 > .topnav {
   display: inline;
   float: right;
-  font-size: 15px;
+	margin-right: 100px;
 }
 
-.nav > .nav-links > a {
+/* .nav > .nav-links > a {
   display: inline-block;
 	padding: 33px;
   text-decoration: none;
   color: black;
   border-bottom: 5px solid transparent;
-}
+} */
 
-.nav-links a.nav-logo{
+/* .nav-links a.nav-logo{
 	padding-bottom: 20px; */
 	/* background: url('donate_logo copy.png');
 background-size: contain;
@@ -114,46 +114,14 @@ width: 100px; */
   letter-spacing: 1px;
   color: #ff6411;
   border-bottom: 5px solid #ff6411;
-}
+} */
 
 .nav > #nav-check {
   display: none;
 }
 
-@media (max-width:822px) {
 
-  .nav > .nav-btn {
-    display: inline-block;
-    position: absolute;
-    right: 15px;
-    top: 10px;
-  }
-
-  .nav > .nav-btn > label {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 32px 30px 20px 20px;
-		}
-
-  .nav > .nav-btn > label > span {
-    display: block;
-    width: 20px;
-    height: 8px;
-    border-top: 2px solid #ff6411;
-  }
-
-  .nav > #nav-check:not(:checked) ~ .nav-links {
-    height: 0px;
-  }
-  .nav > #nav-check:checked ~ .nav-links {
-    height: calc(80vh);
-    overflow-y: auto;
-  }
-
-}
-
-.nav-links .donate-logo {
+/*.nav-links .donate-logo {
 	width: 100%;
 	max-width: 60px;
 	height: auto;
@@ -180,20 +148,14 @@ width: 100px; */
 	  position: relative;
 }
 
-.container6 {
+.nav {
   position: absolute;
 	z-index: 9999;
 	right: 0;
-	margin-right: 100px;
+	width: 100%;
+	height: 105px;
 }
 
-/* .w3-sidebar {
-  position: absolute;
-	z-index: 9999;
-	right: 0;
-	width: 200px;
-	display: none;
-} */
 
 .topnav a {
 	display: inline;
@@ -220,6 +182,7 @@ width: 100px; */
 .topnav #current {
     border-bottom: 2px solid #ff6411;
     }
+
 
 .carousel-fade .carousel-inner .item {
   opacity: 0;
@@ -416,6 +379,17 @@ width: 100px; */
 
 @media screen and (max-width:1200px) {
 
+	.nav {
+		height: 98px;
+	}
+
+	.logo-image img{
+	  max-width: 200px;
+	  height: auto;
+		margin-top: 0.85em;
+		margin-left: 20px;
+	}
+
   .story {
     width:50%;
   }
@@ -460,6 +434,13 @@ width: 100px; */
 
 @media screen and (max-width:900px) {
 
+	.logo-image img{
+		max-width: 185px;
+		height: auto;
+		margin-top: 0.75em;
+		margin-left: 20px;
+	}
+
 	.topnav a {
 	  padding: 40px 10px;
 	  font-size: 16px;
@@ -483,6 +464,82 @@ width: 100px; */
 	}
 
 }
+
+@media screen and (max-width:700px) {
+
+	.logo-image img{
+		max-width: 200px;
+		height: auto;
+		margin-top: 0.2em;
+		margin-left: 20px;
+	}
+
+	.nav > .nav-btn {
+		display: inline-block;
+		position: absolute;
+		right: 15px;
+		top: 10px;
+	}
+
+	.nav > .nav-btn > label {
+		display: inline-block;
+		margin-right: 50px;
+		margin-top: 15px;
+		cursor: pointer;
+		}
+
+	.nav > .nav-btn > label > span {
+		display: block;
+		width: 18px;
+		height: 7px;
+		margin-left: 9px;
+		border-top: 3px solid white;
+		border-radius: 7px;
+	}
+
+	.nav > .nav-btn > label > #top{
+		margin-top: 9px;
+	}
+
+	.nav > #nav-check:not(:checked) ~ .nav-links {
+		height: 0px;
+	}
+	.nav > #nav-check:checked ~ .nav-links {
+		height: calc(80vh);
+		overflow-y: auto;
+	}
+
+	.container6 {
+		display: none;
+	}
+
+}
+
+.stories-button a  {
+	background: transparent;
+	color: #ff5837;
+	padding: 18px 36px 18px;
+	font-size: 1.8rem;
+	font-weight: 400;
+	border: 2px solid;
+	border-radius: 5px;
+	text-align: center;
+	overflow: hidden;
+	text-decoration: none;
+	transition: all 0.3s ease-out;
+}
+
+.stories-button a:hover {
+background: #ff5837;
+color: white;
+border-color: #ff5837;
+transition: all 0.3s ease-in;
+}
+
+.container1 {
+	margin-bottom: calc(17vh);
+}
+
 
 @media screen and (max-width:580px) {
   .story {
@@ -516,30 +573,10 @@ width: 100px; */
 	.section .text{
 		font-size: 15px;
 	}
-}
 
+	.stories-button a  {
+		padding: 16px 34px 16px;
+		font-size: 1.3rem;
+	}
 
-.stories-button a  {
-	background: transparent;
-	color: #ff5837;
-	padding: 18px 36px 18px;
-	font-size: 1.8rem;
-	font-weight: 400;
-	border: 2px solid;
-	border-radius: 5px;
-	text-align: center;
-	overflow: hidden;
-	text-decoration: none;
-	transition: all 0.3s ease-out;
-}
-
-.stories-button a:hover {
-background: #ff5837;
-color: white;
-border-color: #ff5837;
-transition: all 0.3s ease-in;
-}
-
-.container1 {
-	margin-bottom: calc(17vh);
 }
