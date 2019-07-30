@@ -635,7 +635,7 @@ transition: all 0.3s ease-in;
 @media screen and (max-height:540px) {
 
 	.headings h1{
-		font-size: 2em;
+		font-size: 1.8em;
 	}
 
 	.headings p{
@@ -643,7 +643,8 @@ transition: all 0.3s ease-in;
 	}
 
 	.buttons {
-		margin-bottom: -10px;
+		margin-bottom: -17px;
+		margin-top: -18px;
 	}
 
 }
